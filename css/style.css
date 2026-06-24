@@ -146,46 +146,17 @@ button { cursor: pointer; font-family: var(--font-main); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
   text-decoration: none;
 }
-.logo-symbol {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
+.logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
-.logo-arc {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 4px solid transparent;
-}
-.logo-arc--black {
-  border-color: var(--white);
-  top: 0; left: 0;
-}
-.logo-arc--gold {
-  border-color: var(--gold);
-  top: 6px; left: 6px;
-}
-.logo-text { display: flex; flex-direction: column; }
-.logo-name {
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: var(--white);
-  line-height: 1;
-}
-.logo-sub {
-  font-size: 0.55rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  color: var(--gold);
-  line-height: 1;
-  margin-top: 3px;
+.logo-img--footer {
+  height: 38px;
 }
 
 /* Nav */
@@ -244,8 +215,9 @@ button { cursor: pointer; font-family: var(--font-main); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  /* placeholder-foto-hero: background-image a ser inserido com foto real do tatame */
   background: linear-gradient(135deg, #0e0e0d 0%, #1D1D1B 40%, #2a2310 100%);
+  background-size: cover;
+  background-position: center top;
 }
 
 .hero-overlay {
@@ -342,6 +314,14 @@ button { cursor: pointer; font-family: var(--font-main); }
 .sobre-stat-num { display: block; font-size: 2.2rem; font-weight: 800; line-height: 1; }
 .sobre-stat-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
 
+.sobre-img .sobre-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 .sobre-img .img-placeholder {
   width: 100%;
   aspect-ratio: 4/5;
@@ -378,15 +358,13 @@ button { cursor: pointer; font-family: var(--font-main); }
   position: relative;
   height: 220px;
   background: var(--black);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-/* placeholder visual para cards de modalidade */
-.modalidade-card:nth-child(1) .modalidade-card-img { background: linear-gradient(135deg, #1D1D1B, #3a2e00); }
-.modalidade-card:nth-child(2) .modalidade-card-img { background: linear-gradient(135deg, #1D1D1B, #002a3a); }
-.modalidade-card:nth-child(3) .modalidade-card-img { background: linear-gradient(135deg, #1D1D1B, #3a001a); }
 
 .modalidade-card-overlay {
   position: absolute; inset: 0;
@@ -445,6 +423,8 @@ button { cursor: pointer; font-family: var(--font-main); }
 
 .professor-card-foto {
   background: linear-gradient(135deg, #2a2a28, #3d3200);
+  background-size: cover;
+  background-position: top center;
   display: flex;
   align-items: center;
   justify-content: center;
